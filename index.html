@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>AI Student Academic Assistant</title>cd
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+<header>
+
+    <div class="logo">
+        🎓 AI Student Assistant
+    </div>
+
+    <nav>
+        <a href="#chat">Chatbot</a>
+        <a href="#notes">Notes</a>
+        <a href="#exam">Exam</a>
+        <a href="#quiz">Quiz</a>
+        <a href="#timetable">Timetable</a>
+        <a href="#progress">Progress</a>
+    </nav>
+
+</header>
+
+
+<section class="hero">
+
+    <h1>AI-Based Student Academic Assistant</h1>
+
+    <p>
+        Your intelligent learning companion for study,
+        exams and academic preparation.
+    </p>
+
+</section>
+
+
+<!-- CHATBOT -->
+
+<section id="chat" class="container">
+
+    <h2>💬 Academic Chatbot</h2>
+
+    <div id="chatBox" class="chat-box">
+
+        <div class="bot-message">
+            Hello! Ask me an academic question.
+        </div>
+
+    </div>
+
+    <div class="input-row">
+
+        <input
+            type="text"
+            id="chatInput"
+            placeholder="Ask your academic question..."
+        >
+
+        <button onclick="askQuestion()">
+            Ask
+        </button>
+
+    </div>
+
+</section>
+
+
+<!-- PDF UPLOAD -->
+
+<section id="notes" class="container">
+
+    <h2>📄 Upload PDF / Notes</h2>
+
+    <input
+        type="file"
+        id="pdfFile"
+        accept=".pdf"
+    >
+
+    <button onclick="uploadPDF()">
+        Upload PDF
+    </button>
+
+    <p id="uploadStatus"></p>
+
+</section>
+
+
+<!-- ANSWER GENERATOR -->
+
+<section id="exam" class="container">
+
+    <h2>📝 Exam Answer Generator</h2>
+
+    <input
+        type="text"
+        id="answerTopic"
+        placeholder="Enter topic"
+    >
+
+    <select id="answerType">
+
+        <option value="short">
+            Short Answer
+        </option>
+
+        <option value="long">
+            Long Answer
+        </option>
+
+    </select>
+
+    <button onclick="generateAnswer()">
+        Generate Answer
+    </button>
+
+    <div id="answerResult" class="result"></div>
+
+</section>
+
+
+<!-- MCQ -->
+
+<section id="quiz" class="container">
+
+    <h2>❓ MCQ / Quiz Generator</h2>
+
+    <input
+        type="text"
+        id="quizTopic"
+        placeholder="Enter topic"
+    >
+
+    <button onclick="generateQuiz()">
+        Generate Quiz
+    </button>
+
+    <div id="quizResult" class="result"></div>
+
+</section>
+
+
+<!-- IMPORTANT QUESTIONS -->
+
+<section class="container">
+
+    <h2>🎯 Important Questions</h2>
+
+    <input
+        type="text"
+        id="importantTopic"
+        placeholder="Enter subject/topic"
+    >
+
+    <button onclick="generateImportantQuestions()">
+        Generate Questions
+    </button>
+
+    <div id="importantResult" class="result"></div>
+
+</section>
+
+
+<!-- SUMMARIZER -->
+
+<section class="container">
+
+    <h2>🔍 Notes Summarizer</h2>
+
+    <textarea
+        id="notesText"
+        placeholder="Paste your notes here..."
+    ></textarea>
+
+    <button onclick="summarizeNotes()">
+        Summarize
+    </button>
+
+    <div id="summaryResult" class="result"></div>
+
+</section>
+
+
+<!-- TIMETABLE -->
+
+<section id="timetable" class="container">
+
+    <h2>📅 Study Timetable</h2>
+
+    <input
+        type="text"
+        id="subjects"
+        placeholder="Enter subjects separated by comma"
+    >
+
+    <button onclick="createTimetable()">
+        Create Timetable
+    </button>
+
+    <div id="timetableResult" class="result"></div>
+
+</section>
+
+
+<!-- PROGRESS -->
+
+<section id="progress" class="container">
+
+    <h2>📊 Study Progress</h2>
+
+    <input
+        type="number"
+        id="completed"
+        placeholder="Completed topics"
+    >
+
+    <input
+        type="number"
+        id="total"
+        placeholder="Total topics"
+    >
+
+    <button onclick="updateProgress()">
+        Update Progress
+    </button>
+
+    <div id="progressResult" class="progress-card"></div>
+
+</section>
+
+
+<!-- TEXT TO SPEECH -->
+
+<section class="container">
+
+    <h2>🔊 Text to Speech</h2>
+
+    <textarea
+        id="speechText"
+        placeholder="Enter text to hear..."
+    ></textarea>
+
+    <button onclick="speakText()">
+        🔊 Speak
+    </button>
+
+    <button onclick="stopSpeech()">
+        ⏹ Stop
+    </button>
+
+</section>
+
+
+<footer>
+
+    <p>
+        © 2026 AI-Based Student Academic Assistant
+    </p>
+
+</footer>
+
+
+<script src="script.js"></script>
+
+</body>
+
+</html>
